@@ -4,7 +4,7 @@
     <ul>
       <li
         class="item border-bottom"
-        v-for="item of recommendList"
+        v-for="item of list"
         :key="item.id">
         <img class="item-img" :src="item.imgUrl">
         <div class="item-info">
@@ -20,28 +20,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1503/' +
-          'b4/b4834f16bc8f8091.water.jpg_200x200_be5f7395.jpg',
-        title: '珠海长隆海洋王国',
-        desc: '大型鲸鲨展馆，超长飞行过山车'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1604/' +
-          'b8/b8e41237b32404d590.img.jpg_200x200_6530fa9c.jpg',
-        title: '圆明新园',
-        desc: '皇家盛典演出'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1704/' +
-          '1f/1f5f369c720c1c07a3.water.jpg_200x200_444e8a66.jpg',
-        title: '珠海大剧院（日月贝歌剧院）',
-        desc: '情侣必去'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
