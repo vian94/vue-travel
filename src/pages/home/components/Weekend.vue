@@ -27,14 +27,14 @@ export default {
         id: '0001',
         imgUrl: 'http://img1.qunarzz.com/sight/source/' +
           '1505/11/248b40e34116fb.jpg_r_640x214_560e7d05.jpg',
-        title: '珠海长隆海洋王国',
-        desc: '大型鲸鲨展馆，超长飞行过山车'
+        title: '珠海渔女',
+        desc: '情侣路'
       }, {
         id: '0002',
         imgUrl: 'http://img1.qunarzz.com/sight/source/' +
           '1811/b8/5d599bbdcf8b57.jpg_r_640x214_2ee055e3.jpg',
-        title: '珠海长隆海洋王国',
-        desc: '大型鲸鲨展馆，超长飞行过山车'
+        title: '珠海港珠澳大桥',
+        desc: '连接你我'
       }, {
         id: '0003',
         imgUrl: 'http://img1.qunarzz.com/sight/source/' +
