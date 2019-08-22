@@ -4,7 +4,7 @@
     <ul>
       <li
         class="item border-bottom"
-        v-for="item of recommendList"
+        v-for="item of list"
         :key="item.id">
         <div class="item-img-wrapper">
           <img class="item-img" :src="item.imgUrl">
@@ -21,28 +21,8 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/' +
-          '1505/11/248b40e34116fb.jpg_r_640x214_560e7d05.jpg',
-        title: '珠海渔女',
-        desc: '情侣路'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/' +
-          '1811/b8/5d599bbdcf8b57.jpg_r_640x214_2ee055e3.jpg',
-        title: '珠海港珠澳大桥',
-        desc: '连接你我'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/' +
-          '1811/15/66f14e0fd6fbb.jpg_r_640x214_5d69f21d.jpg',
-        title: '珠海长隆海洋王国',
-        desc: '大型鲸鲨展馆，超长飞行过山车'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
@@ -50,14 +30,13 @@ export default {
 <style lang="stylus" scoped>
   @import '~styles/mixins.styl'
   .title
-    margin-top .2rem
     line-height .8rem
     background #eee
     text-indent .2rem
   .item-img-wrapper
     overflow hidden
     height 0
-    padding-bottom 33.9%
+    padding-bottom 37.09%
     .item-img
       width 100%
   .item-info
