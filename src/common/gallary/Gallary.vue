@@ -1,15 +1,13 @@
 <template>
-  <div class="container">
+  <div class="container" @click="handleGallaryClick">
     <div class="wrapper">
       <swiper :options="swiperOptions">
         <!-- slides -->
-        <swiper-slide>
-          <img class="gallary-img"
-               src="http://img1.qunarzz.com/sight/p0/1908/60/6014c4a3b92fb074a3.img.jpg_r_800x800_2263c623.jpg"/>
-        </swiper-slide>
-        <swiper-slide>
-          <img class="gallary-img"
-               src="http://img1.qunarzz.com/sight/p0/1908/f4/f4842597d1d58d18a3.img.jpg_r_800x800_57e80517.jpg"/>
+        <swiper-slide
+          v-for="(item, index) of imgs"
+          :key="index"
+        >
+          <img class="gallary-img" :src="item"/>
         </swiper-slide>
         <!-- Optional controls -->
         <div class="swiper-pagination" slot="pagination"></div>
@@ -34,8 +32,15 @@ export default {
       swiperOptions: {
         pagination: '.swiper-pagination',
         paginationType: 'fraction',
+        observeParents: true,
+        observer: true,
         loop: true
       }
+    }
+  },
+  methods: {
+    handleGallaryClick () {
+      this.$emit('close')
     }
   }
 }
